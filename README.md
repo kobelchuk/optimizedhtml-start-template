@@ -1,28 +1,43 @@
-OptimizedHTML 1.0 - лучшие практики скоростной оптимизированной верстки сайтов
+<h1>OptimizedHTML 1.0 - лучшие практики скоростной оптимизированной верстки сайтов</h1>
 
-Как использовать OptimizedHTML:
-	1. Скачайте optimizedhtml-start-template с GitHub;
-	2. Установите модули Node.js командой npm i;
-	3. Запустите шаблон командой gulp. Готово, можно работать.
+<p>
+	<img src="http://agragregra.github.io/github-images/optimized-html-github-poster.jpg" alt="Start HTML Template">
+</p>
 
-Таски Gulp:
-	1. gulp: запуск дефолтного gulp таска (sass, js, watch, browserSync) для разработки;
-	2. build: сборка проекта в папку dist (очистка, сжатие картинок, удаление всего лишнего);
-	3. deploy: выгрузка проекта на рабочий сервер из папки dist по FTP;
-	4. clearcache: очистка кеша gulp. Полезно для очистки кеш картинок и закешированных путей.
+<p>Автор: <a href="http://webdesign-master.ru" target="_blank">WebDesign Master</a> | <a href="http://webdesign-master.ru/blog/tools/2016-08-19-optimizedhtml.html" target="_blank">Manual in Russian</a></p>
 
-Правила работы со стартовым HTMl шаблоном:
-	1. Все HTML файлы должны иметь одинаковое стартовое наполнение, как у файла app/index.html;
-	2. Найдите комментарий Template Basic Images Start в файле app/index.html. Все ваши кастомные бозовые картинки, такие, как og:image для социальных сетей и фавиконки для различных устройств следует задать в этом месте шаблона.
-	3. Найдите комментарий Load Fonts CSS Start в файле app/index.html. Используйте функцию loadCSS, если сайт находится в подпапке. Используйте (раскомментируйте) функцию loadLocalStorageCSS, если сайт находится в корне домена (предпочтительный способ загрузки шрифтов). Все шрифты подключаются в файле app/sass/fonts.sass с использованием Bourbon;
-	4. Найдите комментарий Custom Browsers Color Start в файле app/index.html. Здесь можно задать цвет шапки браузера на различных устройствах;
-	5. Найдите комментарий Custom HTML в файле app/index.html. Здесь следует писать ваш HTML;
-	6. Найдите комментарий Optimized loading JS Start в файле app/index.html. Здесь происходит оптимизированная загрузка всех скриптов;
-	7. Для установки новой jQuery библиотеки просто выполните в терминале команду bower i plugin-name. Библиотека автоматически будет размещена в папке app/libs. Bower должен быть установлен в вашей системе. Для установки Bower просто выполните команду npm i -g bower в трминале. После этого укажите все ссылки на скрипты jQuery библиотек в таске 'libs' (gulpfile.js);
-	8. Весь ваш JS код пишите в app/js/common.js;
-	9. Все Sass переменные размещайте в app/sass/_vars.sass;
-	10. Все CSS медиазапросы размещайте в app/sass/_media.sass;
-	11. Все CSS стили jQuery библиотек размещайте в app/sass/_libs.sass;
-	12. Все базовые стили (html, body, fonts, buttons, etc...) размещайте в app/sass/_base.sass;
-	13. В файле app/header.sass должны размещаться стили, предназначенные для отображения верхней части сайта на первом экране (на самых больших мониторах). Здесь отображаются стили как главной, так и всех внутренних страниц;
-	14. Переименуйте ht.access в .htaccess перед размещением на рабочем сервере. Этот файл содержит правила для кеширования файлов на сервере.
+<h2>Как использовать OptimizedHTML:</h2>
+
+<ol>
+	<li><a href="https://github.com/agragregra/optimizedhtml-start-template/archive/master.zip">Скачайте</a> <strong>optimizedhtml-start-template</strong> с GitHub;</li>
+	<li>Установите модули Node.js командой: <strong>npm i</strong>;</li>
+	<li>Запустите шаблон командой: <strong>gulp</strong>. Готово, можно работать.</li>
+</ol>
+
+<h2>Таски Gulp:</h2>
+
+<ul>
+	<li><strong>gulp</strong>: запуск дефолтного gulp таска (sass, js, watch, browserSync) для разработки;</li>
+	<li><strong>build</strong>: сборка проекта в папку <strong>dist</strong> (очистка, сжатие картинок, удаление всего лишнего);</li>
+	<li><strong>deploy</strong>: выгрузка проекта на рабочий сервер из папки <strong>dist</strong> по FTP;</li>
+	<li><strong>clearcache</strong>: очистка кеша gulp. Полезно для очистки кеш картинок и закешированных путей.</li>
+</ul>
+
+<h2>Правила работы со стартовым HTMl шаблоном:</h2>
+
+<ol>
+	<li>Все HTML файлы должны иметь одинаковое стартовое наполнение, как у файла <strong>app/index.html</strong>;</li>
+	<li>Найдите комментарий <strong>Template Basic Images Start</strong> в файле app/index.html. Все ваши кастомные бозовые картинки, такие, как og:image для социальных сетей и фавиконки для различных устройств следует задать в этом месте шаблона;</li>
+	<li>Найдите комментарий <strong>Load Fonts CSS Start</strong> в файле app/index.html. Используйте функцию <strong>loadCSS</strong>, если сайт находится в подпапке. Используйте (раскомментируйте) функцию <strong>loadLocalStorageCSS</strong>, если сайт находится в корне домена (предпочтительный способ загрузки шрифтов). Все шрифты подключаются в файле <strong>app/sass/fonts.sass</strong> с использованием Bourbon;</li>
+	<li>Найдите комментарий <strong>Custom Browsers Color Start</strong> в файле app/index.html. Здесь можно задать цвет шапки браузера на различных устройствах;</li>
+	<li>Найдите комментарий <strong>Custom HTML</strong> в файле app/index.html. Здесь следует писать ваш HTML;</li>
+	<li>Найдите комментарий <strong>Optimized loading JS Start</strong> в файле app/index.html. Здесь происходит оптимизированная загрузка всех скриптов;</li>
+	<li>Для установки новой jQuery библиотеки просто выполните в терминале команду "<strong>bower i plugin-name</strong>". Библиотека автоматически будет размещена в папке <strong>app/libs</strong>. Для установки Bower просто выполните команду npm i -g bower в трминале. После этого укажите все ссылки на скрипты jQuery библиотек в таске <strong>'libs'</strong> файла (gulpfile.js);</li>
+	<li>Весь ваш JS код пишите в <strong>app/js/common.js</strong>;</li>
+	<li>Все Sass переменные размещайте в <strong>app/sass/_vars.sass</strong>;</li>
+	<li>Все CSS медиазапросы размещайте в <strong>app/sass/_media.sass</strong>;</li>
+	<li>Все CSS стили jQuery библиотек размещайте в <strong>app/sass/_libs.sass</strong>;</li>
+	<li>Все базовые стили (html, body, fonts, buttons, etc...) размещайте в <strong>app/sass/_base.sass</strong>;</li>
+	<li>В файле <strong>app/header.sass</strong> должны размещаться стили, предназначенные для отображения верхней части сайта на первом экране (на самых больших мониторах). Здесь отображаются стили как главной, так и всех внутренних страниц;</li>
+	<li>Переименуйте <strong>ht.access</strong> в <strong>.htaccess</strong> перед размещением на рабочем сервере. Этот файл содержит правила для кеширования файлов на сервере.</li>
+</ol>
