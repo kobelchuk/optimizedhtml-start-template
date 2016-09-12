@@ -42,7 +42,7 @@ gulp.task('headersass', function() {
 	return gulp.src('app/header.sass')
 		.pipe(sass({
 			includePaths: bourbon.includePaths
-		}).on('error', sass.logError))
+		}).on("error", notify.onError()))
 		.pipe(rename({suffix: '.min', prefix : ''}))
 		.pipe(autoprefixer(['last 15 versions']))
 		.pipe(cleanCSS())
